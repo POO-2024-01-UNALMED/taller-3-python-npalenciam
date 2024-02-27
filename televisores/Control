@@ -42,3 +42,4 @@ class Control:
      def setVolumen(self, volumen):
         if self._tv and self._tv.getEstado():
             self._tv.setVolumen(volumen)
+            
