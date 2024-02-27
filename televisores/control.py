@@ -1,16 +1,15 @@
 from televisores.tv import TV
 class Control:
-     def __init__(self, tv):
-        self._tv = tv
+     def enlazar(self, televisor):
+        self._tv = televisor
+        self._tv.setControl(self)
+        
      def getTv(self):
         return self._tv
     
-     def setTv(self, tv):
-        self._tv = tv   
+     def setTv(self, televisor):
+        self.enlazar (televisor) 
 
-     def enlazar(self, tv):
-        self._tv = tv
-        tv.setControl(self)
 
      def canalUp(self):
         if self._tv:
